@@ -1,0 +1,59 @@
+1.how to compare two json
+let object1  = {
+    name: 
+    "person1" 
+    age:5}
+let object2  ={
+    age5: 
+    name: 
+    "person1"}
+JSON.stringify(let object1)===JSON.stringify(myobject2)
+
+
+
+2.#set($tableRows = $PQ.toList($result))
+<table class="aui">
+  <thead>
+    <tr>
+		<th>Flag</th>
+		<th>Name</th>
+		<th>Code</th>
+		<th>Capital</th>
+		<th>Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    #foreach ($row in $tableRows)
+      <tr>
+	  	<td>$row.Flag</td>
+		<td>$row.Name</td>
+		<td>$row.Code</td>
+		<td>$row.Capital</td>
+		<td>$row.Population</td>
+      </tr>
+    #end
+  </tbody>
+</table>
+
+
+function convert(json) {
+  return JSON.parse(json).map(country => {
+	return {
+	  'Flag': country.flag,
+	  'Name': country.name.common,
+	  'Code': country.cca2,
+	  'Capital': country.capital[0],
+	  'Population': country.population
+	}
+  });
+}
+
+
+function conver(json){
+return JSON.parse(json).map(contry =>{
+return{
+'name':
+'region':
+'subregion':
+'population':
+}
